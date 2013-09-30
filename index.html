@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content=" width=device-width, height=device-height" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.scrollbar.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.3dflow.css">
+
+    <script src="js/idangerous.swiper-2.0.min.js"></script>
+    <script src="js/idangerous.swiper.3dflow-2.0.js"></script>
+
+    <title>Hello World</title>
+</head>
+<body onload="InitBodySize()">
+    <div id="app">
+        <div class="logo"></div>
+        <div id="page-title"></div>
+        <div id="korzinka"><a href="#" class="menu-with-bg korzinka"></a></div>
+        <div id="content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(img/Slider/img1.jpg)">
+                        <a href="#"></a>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/Slider/img2.jpg)">
+                        <a href="#"></a>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/Slider/img3.jpg)">
+                        <a href="#"></a>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/Slider/img4.jpg)">
+                        <a href="#"></a>
+                        <div class="reflection"></div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(img/Slider/img5.jpg)">
+                        <a href="#"></a>
+                        <div class="reflection"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" onclick="navigateTo('menu');" class="big-menu">Menu</a>
+        </div>
+
+        <div id="bottom-menu">
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('reservation')" class="menu-with-bg menu-reservation"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="navigateTo('search')" class="menu-with-bg menu-search"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="navigateTo('contacts')" class="menu-with-bg menu-contatcs"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="waiting-container">
+        <div class="waiting-vertical-center">
+            <div id="waiting">
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/jQuery.js"></script>
+
+    <script type="text/javascript">
+        app.initialize();
+
+        $('.waiting-vertical-center, .waiting-container').css({ 'width': $(window).width() });
+        $('.waiting-container').css({ 'height': $(window).height() });
+        $('#waiting').css({ 'width': '150px', 'height': '150px' });
+
+        var mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            loop: true,
+            tdFlow: {}
+        });
+
+        var menu = window.localStorage.getObject('MENU');
+        if (typeof (menu) == 'undefined' || !menu) {
+            window.localStorage.setObject('MENU', []);
+        }
+        var items = window.localStorage.getObject('ITEMS');
+        if (typeof (items) == 'undefined' || !items) {
+            window.localStorage.setObject('ITEMS', []);
+        }
+    </script>
+</body>
+</html>

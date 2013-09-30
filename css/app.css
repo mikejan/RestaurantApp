@@ -1,0 +1,224 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-user-select: none;
+}
+
+html {
+    font-family: 'Batang', Arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+#app {
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo, .logo-mini {
+    width: 190px;
+    height: 130px;
+    background: url(../img/Logo.png) no-repeat transparent;
+    background-size: contain;
+    background-origin: content-box;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.logo-mini {
+    padding-top: 20px;
+    background-image: url(../img/logo-mini.png) !important;
+    height: 90px !important;
+}
+
+#page-title {
+    width: 100%;
+    height: auto;
+    border-top: 1px dotted #231f20;
+}
+
+#bottom-menu {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    line-height: 50px;
+    padding: 10px 0 10px 0;
+}
+
+    #bottom-menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        #bottom-menu ul li,
+        #bottom-menu ul li:link,
+        #bottom-menu ul li:visited {
+            height: 100%;
+            float: left;
+            text-align: center;
+            vertical-align: middle;
+            width: 33.333%;
+            line-height: 50px;
+            height: 50px !important;
+        }
+
+            #bottom-menu ul li a,
+            #bottom-menu ul li a:link,
+            #bottom-menu ul li a:visited {
+                color: white;
+                text-decoration: none;
+                line-height: 50px;
+                width: 100%;
+                height: 50px;
+                display: block;
+            }
+
+#bottom-menu {
+    background-color: #282828;
+}
+
+.menu-with-bg {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.menu-reservation {
+    background-image: url(../img/Menu/reservation.png);
+    width: 100%;
+    height: 100%;
+}
+
+.menu-search {
+    background-image: url(../img/Menu/search.png);
+    width: 100%;
+    height: 100%;
+}
+
+.menu-contatcs {
+    background-image: url(../img/Menu/contacts.png);
+    width: 100%;
+    height: 100%;
+}
+
+.korzinka {
+    width: 100%;
+    height: 100%;
+}
+
+#korzinka, #korzinka-mini {
+    position: fixed;
+    right: 0;
+    top: 90px;
+    display: block;
+    height: 40px;
+    width: 50px;
+    background: url(../img/korzinka.png) no-repeat;
+    background-size: cover;
+}
+
+#korzinka-mini {
+    top: 67px !important;
+}
+
+#content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.no-text-a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.waiting-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: url(../img/block.png) repeat transparent;
+    display: none;
+}
+
+.waiting-vertical-center {
+    position: absolute;
+    top: 50%;
+    margin-top: -214px;
+    left: 0;
+    width: 100%;
+}
+
+#waiting {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    background: url(../img/wa.gif) no-repeat;
+}

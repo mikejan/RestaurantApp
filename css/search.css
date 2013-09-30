@@ -1,0 +1,15 @@
+#search input {
+    height: 30px;
+}
+
+#search input[type=search] {
+    width: 300px;
+    line-height: 20px;
+}
+
+#search {
+    width: 380px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
